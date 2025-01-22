@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Processing Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='paraphrase.css') }}">
+</head>
+<body>
+    <h1>Text Processing Tool</h1>
+    <form method="post">
+        <label for="input_text">Enter your text:</label><br>
+        <textarea id="input_text" name="input_text" rows="10" cols="50">{{ input_text }}</textarea><br>
+        <input type="radio" id="rephrase" name="option" value="rephrase">
+        <label for="rephrase">Rephrase</label>
+        <input type="radio" id="summarize" name="option" value="summarize">
+        <label for="summarize">Summarize</label>
+        <input type="radio" id="points" name="option" value="points">
+        <label for="points">Important Points</label><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Output:</h2>
+    <pre>{{ output_text }}</pre>
+</body>
+</html>

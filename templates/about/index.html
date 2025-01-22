@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> HTML 5 Boilerplate </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+  </head>
+  <body>
+	<script src="index.js"></script>
+    <section class = "heror">
+        <div class= "heading">
+            <h1>About Us</h1>
+        </div>
+        <div class ="container">
+            <div class="hero-content">
+                <h2> WELCOME TO SpotPlag</h2>
+                <p> </p>
+                <p> 
+                  Welcome to SpotPlag your one-stop solution for robust plagiarism detection services. We're dedicated to preserving academic integrity by utilizing state-of-the-art algorithms to thoroughly scan documents of all kinds. Whether you're a student, educator, researcher, or writer, trust us to ensure the authenticity of your work</p>
+            </div>
+            <div class="hero-image">
+              <img src="{{ url_for('static', filename='images/about.png') }}">
+            </div>
+        </div>
+    </section> 
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Text FIle Checker </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='doc.css') }}">
+</head>
+<body>
+    <h1>Plagiarism Detector</h1>
+    <form id="plagiarism-form" method="post" enctype="multipart/form-data">
+        <label for="file1">File 1:</label>
+        <input type="file" id="file1" name="file1" required>
+        <br>
+        <label for="file2">File 2:</label>
+        <input type="file" id="file2" name="file2" required>
+        <br>
+        <button type="submit">Check for Plagiarism</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

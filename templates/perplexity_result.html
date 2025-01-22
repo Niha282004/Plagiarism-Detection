@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='perplexity_result.css') }}">
+</head>
+<body>
+    <h1>Plagiarism Checker Result</h1>
+    <p>Word count: {{ word_count }}</p>
+    <p>Matches:</p>
+    <div class="match-container">
+        {% for match in matches %}
+        <div class="match-item">
+            <a href="{{ match.url }}" target="_blank">{{ match.url }}</a>
+            <p>Percentage: {{ match.percent }}%</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpotPlag</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <!--- box-icons links --->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--- remix icons links --->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <!--- google font links --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!--- header link --->
+    <header>
+        <a href="#" class="logo">
+            <img src="{{ url_for('static', filename='images/home_logo.png') }}">
+        </a>
+        <ul class="navlist">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('app_perplexity.perplexity_plagiarism') }}">Plag Checker</a></li>
+            <li><a href="{{ url_for('app_doc.check_plagiarism_route') }}">Text to Text</a></li>
+            <li><a href="{{ url_for('app_paraphrase.paraphrase') }}">Paraphrase</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Info</a></li>
+            
+        </ul>
+        <div class="right-content">
+            
+        </div>
+    </header>
+
+    <!--- hero --->
+    <section class="hero">
+        <div class="hero-text">
+            <h5 data-aos="fade-right" data-aos-duration="1400"></h5>
+            <h1 data-aos="zoom-in-left" data-aos-duration="1400" daat-aos-delay="200">- SpotPlag</h1>
+            <p data-aos="fade-right" data-aos-duration="1400" daat-aos-delay="300">......................................................................................................................</p>
+            <div class="main-hero" data-aos="flip-down" data-aos-duration="1400" daat-aos-delay="400">
+                
+                <a href="#" class="price">
+                 <span>A place where you can find plagiarism and paraphrase,summarise and find key points in your text. </span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400" >
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}">
+        </div>
+    </section>
+
+    
+
+    
+
+    <!--- js link --->
+    <script src="js/script.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:1,
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='perplexity.css') }}">
+</head>
+<body>
+    <h1>Plagiarism Checker</h1>
+    <form action="{{ url_for('app_perplexity.perplexity_plagiarism') }}" method="post">
+        <textarea name="text" placeholder="Enter text to check" required></textarea>
+        <input type="submit" value="Check">
+    </form>
+</body>
+</html>
