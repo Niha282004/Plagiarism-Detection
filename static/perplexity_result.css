@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('images/perplex.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #fbf8f8;
+    margin: 10px 0;
+}
+
+p {
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent; /* Make the container transparent */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align the text */
+    color: #ffffff; /* Set text color to white */
+}
+
+.match-container {
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Adjust the width as needed */
+    background-color: transparent; /* Make the container transparent */
+    text-align: center; /* Center align the container */
+}
+
+.match-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: transparent; /* Make the item transparent */
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Adjust the width as needed */
+    text-align: center; /* Center align the item */
+}
+
+.match-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.match-item a:hover {
+    text-decoration: underline;
+}
+
+.match-item p {
+    margin: 2px 0;
+    padding: 0;
+    background-color: transparent; /* Make the text transparent */
+    box-shadow: none;
+    color: #ffffff; /* Set text color to white */
+}
+
+.match-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.match-item li {
+    margin: 2px 0;
+}
