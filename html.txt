@@ -1,0 +1,117 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Plagiarism</a>
+        <nav class="navbar">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('app_doc.check_plagiarism_route') }}">Docx Checker</a>
+            <a href="{{ url_for('app_perplexity.perplexity_plagiarism') }}">Perplexity Checker</a>
+            <a href="{{ url_for('app_paraphrase.paraphrase') }}">Paraphrase</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-Content">
+            <h1>Verify Content's Originality</h1>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+doc.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Plagiarism Detector</h1>
+    <form id="plagiarism-form" method="post" enctype="multipart/form-data">
+        <label for="file1">File 1:</label>
+        <input type="file" id="file1" name="file1" required>
+        <br>
+        <label for="file2">File 2:</label>
+        <input type="file" id="file2" name="file2" required>
+        <br>
+        <button type="submit">Check for Plagiarism</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
+perplexity.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Plagiarism Checker</h1>
+    <form action="{{ url_for('app_perplexity.perplexity_plagiarism') }}" method="post">
+        <textarea name="text" placeholder="Enter text to check" required></textarea>
+        <input type="submit" value="Check">
+    </form>
+</body>
+</html>
+
+
+perplexity_result.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Plagiarism Checker Result</h1>
+    <p>Word count: {{ word_count }}</p>
+    <p>Turnitin index: {{ turnitin_index }}</p>
+    <p>Matches: {{ matches }}</p>
+</body>
+</html>
+
+
+paraphrase.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Processing Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Text Processing Tool</h1>
+    <form method="post">
+        <label for="input_text">Enter your text:</label><br>
+        <textarea id="input_text" name="input_text" rows="10" cols="50"></textarea><br>
+        <input type="radio" id="rephrase" name="option" value="rephrase">
+        <label for="rephrase">Rephrase</label>
+        <input type="radio" id="summarize" name="option" value="summarize">
+        <label for="summarize">Summarize</label>
+        <input type="radio" id="points" name="option" value="points">
+        <label for="points">Important Points</label><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Output:</h2>
+    <pre>{{ output_text }}</pre>
+</body>
+</html>
+
